@@ -1,0 +1,89 @@
+@import "../fonts/fonts.scss";
+
+body {
+  & #pagepilling {
+    & div.sec1 {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      background: url("../img/back.jpg");
+      object-fit: cover;
+        & header {
+          & nav {
+            display: flex;
+            flex-direction: row;
+            background: rgba(0, 0, 0, 0.4);
+            & img#navbar_logo {
+              width: 70px;
+              margin-left: 40px;
+            }
+            & ul#navigation {
+              display: flex;
+              margin: auto;
+              & li > a {
+                text-decoration: none;
+                color: #362f2f;
+                font-family: "quicksand", sans-serif;
+                font-size: 22px;
+                margin-left: 2em;
+                &:hover {
+                  color: white;
+                  transition: 150ms ease-in-out;
+                  border-bottom: 2px solid #ff7f82;
+                }
+              }
+              & #btn-accueil {
+                color: white;
+                border-bottom: 2px solid #ff7f82;
+              }
+            }
+            & button.raise {
+              background: none;
+              border: 2px solid #ff7f82;
+              font: inherit;
+              line-height: 1;
+              margin: 0.5em;
+              padding: 1em 2em;
+              color: #ff7f82;
+              &:hover, &:focus {
+                box-shadow: 0 0.8em 0.8em -0.4em #ff7f82;
+                border: 2px solid #fff;
+                transform: translateY(-0.25em);
+                color: #fff;
+                transition: 400ms ease-in-out;
+              }
+            }
+          }
+        }
+        & #img_part {
+          display: flex;
+          justify-content: center;
+          img#logo_1p {
+            width: 550px;
+            margin: auto;
+          }
+        }
+        & #slider {
+          display: none;
+          .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 4s;
+            animation-name: fade;
+            animation-duration: 4s;
+          }
+
+          @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+
+          @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+        }
+    }
+  }
+}

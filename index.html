@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+    <head>
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <script
+                src="https://code.jquery.com/jquery-3.1.1.min.js"
+                integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+                crossorigin="anonymous"></script>
+        <script src="semantic/dist/semantic.min.js"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="./js/jquery.pagepiling.css" />
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="./js/jquery.pagepiling.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#pagepiling').pagepiling({
+                    navigation: {
+                        'textColor': '#fff',
+                        'bulletsColor': '#fff',
+                        'position': 'right',
+                        'tooltips': ['Accueil', 'Qui sommes-nous ?']
+                    },
+                });
+            });
+        </script>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div id="pagepilling">
+            <div class="section sec1">
+                <header class="headline">
+                    <nav class="navbar navbar-expand-sm navbar-dark d-flex">
+                        <!-- Brand/logo -->
+                        <img src="img/logo.png" alt="logo GTAStory" id="navbar_logo">
+
+                        <!-- Links -->
+                        <ul class="navbar-nav" id="navigation">
+                            <li class="nav-item">
+                                <a class="nav-link btn" href="#" id="btn-accueil">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Wiki</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Galerie</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Vote</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Intranet</a>
+                            </li>
+                        </ul>
+                        <button class="raise">NOUS REJOINDRE</button>
+                    </nav>
+                </header>
+
+                <div id="img_part">
+                    <img src="img/logo.png" alt="Logo GTAStory" id="logo_1p">
+                </div>
+
+                <div id="slider" class="container-fluid text-center d-flex justify-content-center">
+                    <div class="slide fade">
+                        <img src="img/slider1.png" alt="test">
+                    </div>
+                    <div class="slide fade">
+                        <img src="img/slider1.png" alt="test">
+                    </div>
+                    <div class="slide fade">
+                        <img src="img/slider1.png" alt="test">
+                    </div>
+                </div>
+                <script>
+                    let slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
+                        let i;
+                        let slides = document.getElementsByClassName("slide");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {slideIndex = 1}
+                        slides[slideIndex-1].style.display = "block";
+                        setTimeout(showSlides, 4000); // Change image every 2 seconds
+                    }
+                </script>
+            </div>
+
+            <div class="section">
+                <p>TEST</p>
+            </div>
+        </div>
+    </body>
+</html>
