@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="fr">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
         <script
                 src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -17,6 +18,7 @@
 
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script type="text/javascript" src="./js/jquery.pagepiling.js"></script>
+        <script type="text/javascript" src="./js/functions.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#pagepiling').pagepiling({
@@ -24,17 +26,19 @@
                         'textColor': '#fff',
                         'bulletsColor': '#fff',
                         'position': 'right',
-                        'tooltips': ['Accueil', 'Qui sommes-nous ?']
+                        'tooltips': ['Accueil', 'Règlement / Code pénal', 'Informations', 'Notre équipe']
                     },
                 });
             });
         </script>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-        <div id="pagepilling">
+        <div id="pagepiling">
             <div class="section sec1">
                 <header class="headline">
                     <nav class="navbar navbar-expand-sm navbar-dark d-flex">
@@ -72,10 +76,10 @@
                         <img src="img/slider1.png" alt="test">
                     </div>
                     <div class="slide fade">
-                        <img src="img/slider1.png" alt="test">
+                        <img src="img/slider2.png" alt="test">
                     </div>
                     <div class="slide fade">
-                        <img src="img/slider1.png" alt="test">
+                        <img src="img/slider3.png" alt="test">
                     </div>
                 </div>
                 <script>
@@ -91,13 +95,123 @@
                         slideIndex++;
                         if (slideIndex > slides.length) {slideIndex = 1}
                         slides[slideIndex-1].style.display = "block";
-                        setTimeout(showSlides, 4000); // Change image every 2 seconds
+                        setTimeout(showSlides, 6000);
                     }
                 </script>
             </div>
 
-            <div class="section">
-                <p>TEST</p>
+            <div class="section sec2">
+                <h2>Règlement et Code Pénal</h2>
+                <hr class="hr-text">
+
+                <div id="content-sec2">
+                    <div id="sec2-line1">
+                        <div class="col-2 i-sec2">
+                            <i class="far fa-file-alt"></i>
+                        </div>
+                        <p class="col-7">Avant de pouvoir nous rejoindre, il va falloir passer par un peu de lecture. Lors de votre candidature sur le serveur, afin
+                        d'obtenir un accès whitelist, des questions sur le règlement interne au serveur vous serons posées. Il vous est donc fortement conseillé
+                        de le lire attentivement</p>
+                    </div>
+                    <p><a class="link-sec2" href="#">Retrouvez le règlement ici</a></p>
+                    <div id="sec2-line2">
+                        <p class="col-7">Vous pouvez également commencer à lire le code pénal. Cela vous permettra de connaître ce que vous risquez à chacun de
+                        vos actes sur GTAStory. Comme ça.. il n'y a pas de surprises une fois arrivé devant Monsieur le juge !</p>
+                        <div class="col-2 i-sec2">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                    </div>
+                    <p><a class="link-sec2" href="#">Retrouvez le code pénal ici</a></p>
+                </div>
+            </div>
+
+            <div class="section sec3">
+                <h2>Informations</h2>
+                <hr class="hr-text">
+
+                <div id="content-sec3">
+                    <div class="container-fluid h-100">
+                        <div class="row align-middle">
+                            <div class="col-md-6 col-lg-4 column">
+                                <div class="card gr-1">
+                                    <div class="txt">
+                                        <h1>UNE COMMUNAUTÉ </br>
+                                            FRANCOPHONE</h1>
+                                        <p>Afin de pouvoir vous venir en aide <br> comme il se doit, la langue <br> officielle du serveur est le français</p>
+                                    </div>
+                                    <div class="ico-card">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 column">
+                                <div class="card gr-2">
+                                    <div class="txt">
+                                        <h1>CHOISISSEZ VOTRE </br>
+                                            VIE</h1>
+                                        <p>Une grande variété d'activitées professionnelles vous est <br>proposée chez nous</p>
+                                    </div>
+                                    <div class="ico-card">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 column">
+                                <div class="card gr-3">
+                                    <div class="txt">
+                                        <h1>CRÉEZ VOTRE </br>
+                                            EMPIRE</h1>
+                                        <p>Dans l'illégal comme dans le légal, il vous <br> est possible de fonder quelque chose de grand</p>
+                                    </div>
+                                    <div class="ico-card">
+                                        <i class="fas fa-chess-rook"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 column">
+                                <div class="card gr-4">
+                                    <div class="txt">
+                                        <h1>DÉCOUVREZ NOS </br>
+                                            MODS INÉDITS</h1>
+                                        <p>Nos développeurs travaillent d'arrache-pied pour que vous puissiez <br> trouver ici ce que vous ne trouverez nul part ailleurs</p>
+                                    </div>
+                                    <div class="ico-card">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 column">
+                                <div class="card gr-5">
+                                    <div class="txt">
+                                        <h1>NOTRE STAFF </br>
+                                            ACTIF</h1>
+                                        <p>Vous pouvez retrouver tous les jours notre équipe présente sur discord en cas de soucis</p>
+                                    </div>
+                                    <div class="ico-card">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 column">
+                                <div class="card gr-6">
+                                    <div class="txt">
+                                        <h1>PARTICIPEZ À </br>
+                                            NOS ÉVENTS</h1>
+                                        <p>Chaque semaines, retrouvez sur GTAStory des évenements inédits afin de pouvoir changer du train-train quotidien</p>
+                                    </div>
+                                    <div class="ico-card">
+                                        <i class="far fa-calendar-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section sec4">
+                <h2>Notre équipe</h2>
+                <hr class="hr-text">
             </div>
         </div>
     </body>

@@ -4,45 +4,46 @@
   font-weight: normal;
   font-style: normal;
 }
-body #pagepilling div.sec1 {
-  display: flex;
-  flex-direction: column;
+body #pagepiling div.sec1 {
   height: 100%;
   width: 100%;
   padding: 0;
-  background: url("../img/back.jpg");
+  display: flex;
   object-fit: cover;
+  flex-direction: column;
+  background: url("../img/back.jpg");
 }
-body #pagepilling div.sec1 header nav {
+body #pagepiling div.sec1 header nav {
   display: flex;
   flex-direction: row;
   background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.51);
 }
-body #pagepilling div.sec1 header nav img#navbar_logo {
+body #pagepiling div.sec1 header nav img#navbar_logo {
   width: 70px;
   margin-left: 40px;
 }
-body #pagepilling div.sec1 header nav ul#navigation {
+body #pagepiling div.sec1 header nav ul#navigation {
   display: flex;
   margin: auto;
 }
-body #pagepilling div.sec1 header nav ul#navigation li > a {
+body #pagepiling div.sec1 header nav ul#navigation li > a {
   text-decoration: none;
   color: #362f2f;
   font-family: "quicksand", sans-serif;
   font-size: 22px;
   margin-left: 2em;
 }
-body #pagepilling div.sec1 header nav ul#navigation li > a:hover {
+body #pagepiling div.sec1 header nav ul#navigation li > a:hover {
   color: white;
   transition: 150ms ease-in-out;
   border-bottom: 2px solid #ff7f82;
 }
-body #pagepilling div.sec1 header nav ul#navigation #btn-accueil {
+body #pagepiling div.sec1 header nav ul#navigation #btn-accueil {
   color: white;
   border-bottom: 2px solid #ff7f82;
 }
-body #pagepilling div.sec1 header nav button.raise {
+body #pagepiling div.sec1 header nav button.raise {
   background: none;
   border: 2px solid #ff7f82;
   font: inherit;
@@ -51,45 +52,303 @@ body #pagepilling div.sec1 header nav button.raise {
   padding: 1em 2em;
   color: #ff7f82;
 }
-body #pagepilling div.sec1 header nav button.raise:hover, body #pagepilling div.sec1 header nav button.raise:focus {
+body #pagepiling div.sec1 header nav button.raise:hover, body #pagepiling div.sec1 header nav button.raise:focus {
   box-shadow: 0 0.8em 0.8em -0.4em #ff7f82;
   border: 2px solid #fff;
   transform: translateY(-0.25em);
   color: #fff;
   transition: 400ms ease-in-out;
 }
-body #pagepilling div.sec1 #img_part {
+body #pagepiling div.sec1 #img_part {
   display: flex;
   justify-content: center;
 }
-body #pagepilling div.sec1 #img_part img#logo_1p {
+body #pagepiling div.sec1 #img_part img#logo_1p {
   width: 550px;
   margin: auto;
 }
-body #pagepilling div.sec1 #slider {
+body #pagepiling div.sec1 #slider {
   display: none;
 }
-body #pagepilling div.sec1 #slider .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 4s;
+body #pagepiling div.sec1 #slider .fade {
   animation-name: fade;
-  animation-duration: 4s;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
+  animation-duration: 8s;
 }
 @keyframes fade {
-  from {
-    opacity: 0.4;
+  0% {
+    opacity: 0.2;
   }
-  to {
+  50% {
     opacity: 1;
   }
+  100% {
+    opacity: 0.2;
+  }
+}
+body #pagepiling div.sec2 {
+  background-color: #151515;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  object-fit: cover;
+}
+body #pagepiling div.sec2 h2 {
+  font-size: 80px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 40px 0 30px 0;
+  color: #ffffff;
+}
+body #pagepiling div.sec2 .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  height: 1.5em;
+  opacity: 0.5;
+  box-shadow: 0 1em 1em -0.4em #000000;
+}
+body #pagepiling div.sec2 .hr-text:before {
+  content: "";
+  background: linear-gradient(to right, transparent, #ff7f82, transparent);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+}
+body #pagepiling div.sec2 .hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  line-height: 1.5em;
+}
+body #pagepiling div.sec2 div#content-sec2 {
+  display: flex;
+  flex-direction: column;
+}
+body #pagepiling div.sec2 div#content-sec2 #sec2-line1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5em;
+}
+body #pagepiling div.sec2 div#content-sec2 #sec2-line1 p {
+  font-family: "quicksand", sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+}
+body #pagepiling div.sec2 div#content-sec2 #sec2-line1 div.i-sec2 {
+  display: flex;
+  justify-content: center;
+}
+body #pagepiling div.sec2 div#content-sec2 #sec2-line1 div.i-sec2 i {
+  font-size: 200px;
+  color: #182032;
+}
+body #pagepiling div.sec2 div#content-sec2 #sec2-line2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5em;
+}
+body #pagepiling div.sec2 div#content-sec2 #sec2-line2 p {
+  font-family: "quicksand", sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+}
+body #pagepiling div.sec2 div#content-sec2 #sec2-line2 div.i-sec2 {
+  display: flex;
+  justify-content: center;
+}
+body #pagepiling div.sec2 div#content-sec2 #sec2-line2 div.i-sec2 i {
+  font-size: 200px;
+  color: #182032;
+}
+body #pagepiling div.sec2 div#content-sec2 p {
+  text-align: center;
+}
+body #pagepiling div.sec2 div#content-sec2 p .link-sec2 {
+  text-decoration: none;
+  color: #ff7f82;
+}
+body #pagepiling div.sec2 div#content-sec2 p .link-sec2:hover {
+  color: white;
+  transition: 250ms ease-in-out;
+}
+body #pagepiling div.sec3 {
+  background: url("../img/back2.jpg");
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  object-fit: cover;
+}
+body #pagepiling div.sec3 h2 {
+  font-size: 80px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 40px 0 30px 0;
+  color: #ffffff;
+}
+body #pagepiling div.sec3 .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  height: 1.5em;
+  opacity: 0.5;
+  box-shadow: 0 1em 1em -0.4em #000000;
+}
+body #pagepiling div.sec3 .hr-text:before {
+  content: "";
+  background: linear-gradient(to right, transparent, #ff7f82, transparent);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+}
+body #pagepiling div.sec3 .hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  line-height: 1.5em;
+}
+body #pagepiling div.sec3 .gr-1 {
+  background: linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+}
+body #pagepiling div.sec3 .gr-2 {
+  background: linear-gradient(170deg, #B4EC51 0%, #429321 100%);
+}
+body #pagepiling div.sec3 .gr-3 {
+  background: linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
+}
+body #pagepiling div.sec3 .gr-4 {
+  background: linear-gradient(170deg, #f8cf01 0%, #deae1d 100%);
+}
+body #pagepiling div.sec3 .gr-5 {
+  background: linear-gradient(170deg, #ec5151 0%, #932121 100%);
+}
+body #pagepiling div.sec3 .gr-6 {
+  background: linear-gradient(170deg, #d78b6d 0%, #ae3f23 100%);
+}
+body #pagepiling div.sec3 * {
+  transition: 0.5s;
+}
+body #pagepiling div.sec3 .h-100 {
+  height: 100vh !important;
+}
+body #pagepiling div.sec3 .align-middle {
+  position: relative;
+  top: 21em;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  padding: 0 40px 0 40px;
+}
+body #pagepiling div.sec3 .column {
+  margin-top: 3rem;
+  padding-left: 3rem;
+}
+body #pagepiling div.sec3 .column:hover {
+  padding-left: 0;
+}
+body #pagepiling div.sec3 .column:hover .card .txt {
+  margin-left: 1rem;
+}
+body #pagepiling div.sec3 .column:hover .card .txt h1, body #pagepiling div.sec3 .column:hover .card .txt p {
+  color: black;
+  opacity: 1;
+}
+body #pagepiling div.sec3 .card {
+  height: 200px;
+  margin: 0;
+  padding: 1.7rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  color: white;
+  letter-spacing: 0.05rem;
+  font-family: "Oswald", sans-serif;
+  box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+}
+body #pagepiling div.sec3 .card .txt {
+  margin-left: -3rem;
+  z-index: 1;
+}
+body #pagepiling div.sec3 .card .txt h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: "quicksand", sans-serif;
+}
+body #pagepiling div.sec3 .card .txt p {
+  font-size: 0.9rem;
+  font-family: "quicksand", sans-serif;
+  letter-spacing: 0rem;
+  margin-top: 25px;
+  opacity: 0;
+  color: white;
+}
+body #pagepiling div.sec3 .card .ico-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body #pagepiling div.sec3 .card i {
+  position: relative;
+  right: -50%;
+  top: 60%;
+  font-size: 16rem;
+  line-height: 0;
+  opacity: 0.2;
+  color: white;
+  z-index: 0;
+}
+body #pagepiling div.sec4 {
+  background-color: #151515;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  object-fit: cover;
+}
+body #pagepiling div.sec4 h2 {
+  font-size: 80px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 40px 0 30px 0;
+  color: #ffffff;
+}
+body #pagepiling div.sec4 .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  height: 1.5em;
+  opacity: 0.5;
+  box-shadow: 0 1em 1em -0.4em #000000;
+}
+body #pagepiling div.sec4 .hr-text:before {
+  content: "";
+  background: linear-gradient(to right, transparent, #ff7f82, transparent);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+}
+body #pagepiling div.sec4 .hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  line-height: 1.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
