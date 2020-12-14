@@ -40,6 +40,9 @@
     <body>
         <div id="pagepiling">
             <div class="section sec1">
+                <video autoplay muted loop id="myVideo">
+                    <source src="./img/videoback.mp4" type="video/mp4">
+                </video>
                 <header class="headline">
                     <nav class="navbar navbar-expand-sm navbar-dark d-flex">
                         <!-- Brand/logo -->
@@ -51,7 +54,7 @@
                                 <a class="nav-link btn" href="#" id="btn-accueil">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Wiki</a>
+                                <a class="nav-link" href="./wiki/index.php">Wiki</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Galerie</a>
@@ -63,7 +66,7 @@
                                 <a class="nav-link" href="#">Intranet</a>
                             </li>
                         </ul>
-                        <button class="raise">NOUS REJOINDRE</button>
+                        <a href="https://discord.gg/xqNSqPWZ" target="_blank"><button class="raise">REJOINDRE</button></a>
                     </nav>
                 </header>
 
@@ -126,8 +129,10 @@
             </div>
 
             <div class="section sec3">
-                <h2>Informations</h2>
-                <hr class="hr-text">
+                <div class="header_sections">
+                    <h2>Informations</h2>
+                    <hr class="hr-text">
+                </div>
 
                 <div id="content-sec3">
                     <div class="container-fluid h-100">
@@ -212,6 +217,60 @@
             <div class="section sec4">
                 <h2>Notre équipe</h2>
                 <hr class="hr-text">
+
+                <div class="container-fluid col-10 mt-5">
+                    <div class="row pb-5 mb-4">
+
+                        <div class="col-md-4 mt-4">
+                            <div class="card profile-card-1">
+                                <img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+                                <img src="./img/profil4.png" alt="profile-image" class="profile"/>
+                                <div class="card-content">
+                                    <h2>Lewis Parker<small>Direction | Développeur</small></h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mt-4">
+                            <div class="card profile-card-1">
+                                <img src="./img/back-profil1.jpg" alt="profile-sample1" class="background"/>
+                                <img src="./img/profil3.png" alt="profile-image" class="profile"/>
+                                <div class="card-content">
+                                    <h2>Marius Falone<small>Développeur Web | Graphiste</small></h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mt-4">
+                            <div class="card profile-card-1">
+                                <img src="./img/back-profil3.jpg" alt="profile-sample1" class="background"/>
+                                <img src="./img/profil1.png" alt="profile-image" class="profile"/>
+                                <div class="card-content">
+                                    <h2>Jean-Patrick Petit<small>Développeur Back-End</small></h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mt-4">
+                            <div class="card profile-card-1">
+                                <img src="./img/back-profil2.jpg" alt="profile-sample1" class="background"/>
+                                <img src="./img/profil2.png" alt="profile-image" class="profile"/>
+                                <div class="card-content">
+                                    <h2>Peter Scott<small>Support</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <div id="footer_copyright">
+                        <p>Tous droits réservés &copy; GTAStory | Serveur RP GTAV Francophone</p>
+                    </div>
+                    <div id="footer_contact">
+                        <button class="btn btn-dark contact"><a class="a_footer" href="https://discord.gg/xqNSqPWZ">Nous contacter</a></button>
+                    </div>
+                </footer>
             </div>
         </div>
     </body>

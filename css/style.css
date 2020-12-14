@@ -1,6 +1,30 @@
 @font-face {
   font-family: "quicksand";
-  src: url("../fonts/quicksand-regular-webfont.woff2") format("woff2"), url("../fonts/quicksand-regular-webfont.woff") format("woff");
+  src: url("../fonts/quicksand/quicksand-regular-webfont.woff2") format("woff2"), url("../fonts/quicksand/quicksand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mitr-el";
+  src: url("../fonts/mitr/mitr-extralight/mitr-extralight-webfont.woff2") format("woff2"), url("../fonts/mitr/mitr-extralight/mitr-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mitrlight";
+  src: url("../fonts/mitr/mitr-light/mitr-light-webfont.woff2") format("woff2"), url("../fonts/mitr/mitr-light/mitr-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mitrmedium";
+  src: url("../fonts/mitr/mitr-medium/mitr-medium-webfont.woff2") format("woff2"), url("../fonts/mitr/mitr-medium/mitr-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mitrsemibold";
+  src: url("../fonts/mitr/mitr-semibold/mitr-semibold-webfont.woff2") format("woff2"), url("../fonts/mitr/mitr-semibold/mitr-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,12 +35,21 @@ body #pagepiling div.sec1 {
   display: flex;
   object-fit: cover;
   flex-direction: column;
-  background: url("../img/back.jpg");
+}
+body #pagepiling div.sec1 #myVideo {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
 }
 body #pagepiling div.sec1 header nav {
   display: flex;
   flex-direction: row;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.51);
 }
 body #pagepiling div.sec1 header nav img#navbar_logo {
@@ -29,7 +62,7 @@ body #pagepiling div.sec1 header nav ul#navigation {
 }
 body #pagepiling div.sec1 header nav ul#navigation li > a {
   text-decoration: none;
-  color: #362f2f;
+  color: #929292;
   font-family: "quicksand", sans-serif;
   font-size: 22px;
   margin-left: 2em;
@@ -66,23 +99,24 @@ body #pagepiling div.sec1 #img_part {
 body #pagepiling div.sec1 #img_part img#logo_1p {
   width: 550px;
   margin: auto;
+  z-index: 1;
 }
 body #pagepiling div.sec1 #slider {
   display: none;
 }
 body #pagepiling div.sec1 #slider .fade {
   animation-name: fade;
-  animation-duration: 8s;
+  animation-duration: 7s;
 }
 @keyframes fade {
   0% {
-    opacity: 0.2;
+    opacity: 0;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0.2;
+    opacity: 0;
   }
 }
 body #pagepiling div.sec2 {
@@ -97,7 +131,7 @@ body #pagepiling div.sec2 h2 {
   font-size: 80px;
   font-weight: bolder;
   text-align: center;
-  margin: 40px 0 30px 0;
+  padding: 40px 0 30px 0;
   color: #ffffff;
 }
 body #pagepiling div.sec2 .hr-text {
@@ -185,14 +219,17 @@ body #pagepiling div.sec3 {
   display: flex;
   object-fit: cover;
 }
-body #pagepiling div.sec3 h2 {
+body #pagepiling div.sec3 .header_sections {
+  background-color: #151515;
+}
+body #pagepiling div.sec3 .header_sections h2 {
   font-size: 80px;
   font-weight: bolder;
   text-align: center;
-  margin: 40px 0 30px 0;
+  padding: 40px 0 30px 0;
   color: #ffffff;
 }
-body #pagepiling div.sec3 .hr-text {
+body #pagepiling div.sec3 .header_sections .hr-text {
   line-height: 1em;
   position: relative;
   outline: 0;
@@ -201,7 +238,7 @@ body #pagepiling div.sec3 .hr-text {
   opacity: 0.5;
   box-shadow: 0 1em 1em -0.4em #000000;
 }
-body #pagepiling div.sec3 .hr-text:before {
+body #pagepiling div.sec3 .header_sections .hr-text:before {
   content: "";
   background: linear-gradient(to right, transparent, #ff7f82, transparent);
   position: absolute;
@@ -210,7 +247,7 @@ body #pagepiling div.sec3 .hr-text:before {
   width: 100%;
   height: 1px;
 }
-body #pagepiling div.sec3 .hr-text:after {
+body #pagepiling div.sec3 .header_sections .hr-text:after {
   content: attr(data-content);
   position: relative;
   display: inline-block;
@@ -270,7 +307,7 @@ body #pagepiling div.sec3 .card {
   border-radius: 0;
   color: white;
   letter-spacing: 0.05rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "quicksand", sans-serif;
   box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
 }
 body #pagepiling div.sec3 .card .txt {
@@ -286,7 +323,7 @@ body #pagepiling div.sec3 .card .txt h1 {
 body #pagepiling div.sec3 .card .txt p {
   font-size: 0.9rem;
   font-family: "quicksand", sans-serif;
-  letter-spacing: 0rem;
+  letter-spacing: 0;
   margin-top: 25px;
   opacity: 0;
   color: white;
@@ -323,7 +360,7 @@ body #pagepiling div.sec4 h2 {
   font-size: 80px;
   font-weight: bolder;
   text-align: center;
-  margin: 40px 0 30px 0;
+  padding: 40px 0 30px 0;
   color: #ffffff;
 }
 body #pagepiling div.sec4 .hr-text {
@@ -349,6 +386,80 @@ body #pagepiling div.sec4 .hr-text:after {
   position: relative;
   display: inline-block;
   line-height: 1.5em;
+}
+body #pagepiling div.sec4 div.container-fluid div.row div.col-md-4 .profile-card-1 {
+  font-family: "Open Sans", Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  height: 250px;
+  border: none;
+}
+body #pagepiling div.sec4 div.container-fluid div.row div.col-md-4 .profile-card-1 .background {
+  width: 100%;
+  vertical-align: top;
+  opacity: 0.9;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transform: scale(1.8);
+  transform: scale(2.8);
+}
+body #pagepiling div.sec4 div.container-fluid div.row div.col-md-4 .profile-card-1 .card-content {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 55%;
+}
+body #pagepiling div.sec4 div.container-fluid div.row div.col-md-4 .profile-card-1 .profile {
+  position: absolute;
+  bottom: 22%;
+  left: 50%;
+  width: 200px;
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+body #pagepiling div.sec4 div.container-fluid div.row div.col-md-4 .profile-card-1 h2 {
+  margin: 0 0 5px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #ffffff;
+  text-shadow: 2px 4px 8px black;
+}
+body #pagepiling div.sec4 div.container-fluid div.row div.col-md-4 .profile-card-1 h2 small {
+  display: block;
+  font-size: 15px;
+  margin-top: 10px;
+}
+body #pagepiling div.sec4 footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.34);
+  position: fixed;
+  bottom: 0;
+}
+body #pagepiling div.sec4 footer #footer_copyright {
+  color: #474747;
+  margin: 10px 0 0 10px;
+}
+body #pagepiling div.sec4 footer #footer_contact {
+  margin: 5px 10px 0 0;
+}
+body #pagepiling div.sec4 footer #footer_contact button {
+  color: white;
+}
+body #pagepiling div.sec4 footer #footer_contact button:hover a {
+  color: #ff7f82;
+}
+body #pagepiling div.sec4 footer #footer_contact button a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
